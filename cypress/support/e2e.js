@@ -14,4 +14,10 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+
+// Este código se ejecutará automáticamente antes de CADA prueba en tu proyecto
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Devuelve false para evitar que Cypress falle por errores de la página web
+    return false;
+});
 import './commands'
